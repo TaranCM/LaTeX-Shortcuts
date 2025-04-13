@@ -1,0 +1,33 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{shortcuts}[2025/04/13 Custom Package]
+
+\RequirePackage{amssymb,calligra}
+
+% Stats
+
+\renewcommand{\P}[1]{\mathbb{P}\left[#1\right]}
+\newcommand{\E}[1]{\mathbb{E}\left[#1\right]}
+\newcommand{\var}[1]{\text{var}\left(#1\right)}
+\newcommand{\cov}[1]{\text{cov}\left(#1\right)}
+\newcommand{\corr}[1]{\text{corr}\left(#1\right)}
+\newcommand{\F}{\mathcal{F}}
+\newcommand{\deq}[0]{\stackrel{\Delta}{=}}
+
+% Text enclosure
+
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+\newcommand{\lcb}{\left\{}
+\newcommand{\rcb}{\right\}}
+
+% General typefacing
+
+\renewcommand{\cal}[1]{\text{\calligra#1\normalfont}} % use in mathmode
+
+
+
+
+
+\endinput
