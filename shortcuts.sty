@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{shortcuts}[2025/04/26 Custom Package] % Last edit date
+\ProvidesPackage{shortcuts}[2025/04/27 Custom Package] % Last edit date
 
 \RequirePackage{amssymb,calligra}
 
@@ -25,7 +25,18 @@
 % Calculus
 
 \newcommand{\del}{\partial}
+
+% Sets
 \newcommand{\seq}[3]{\left\{#1\right\}_{#2}^{#3}}
+\newcommand{\setof}[3][b]{%
+    \ifx b#1\left\{#2\left|#3\right.\right\}\else% bar
+    \ifx c#1\left\{#2:#3\right\}\else% colon
+    \ifx n#1\left\{#2\right\}#3\else% none
+    \mathrm{Illegal~option}%
+    \fi\fi\fi%
+}
+    
+
 
 % Proofs
 
