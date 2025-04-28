@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{shortcuts}[2025/04/27 Custom Package] % Last edit date
+\ProvidesPackage{shortcuts}[2025/04/26 01:37 Custom Package] % Last edit date
 
 \RequirePackage{amssymb,calligra}
 
@@ -15,12 +15,24 @@
 % Stats
 
 \renewcommand{\P}[1]{\mathbb{P}\left[#1\right]}
-\newcommand{\E}[1]{\mathbb{E}\left[#1\right]}
 \newcommand{\var}[1]{\text{var}\left(#1\right)}
 \newcommand{\cov}[1]{\text{cov}\left(#1\right)}
 \newcommand{\corr}[1]{\text{corr}\left(#1\right)}
 \newcommand{\F}{\mathcal{F}}
 \newcommand{\deq}[0]{\overset{\Delta}{=}}
+\newcommand{\E}[2][b]{
+    \ifx b#1\mathbb{E}\left[#2\right]\else
+    \ifx p#1\mathbb{E}\left(#2\right)\else
+    \mathrm{Illegal~option}
+    \fi\fi
+}
+\newcommand{\Eif}[3][r]{
+    \ifx r#1\mathbb{E}\left[#2\left|#3\right.\right]\else
+    \ifx l#1\mathbb{E}\left[\left.#2\right|#3\right]\else
+    \mathrm{Illegal~option}
+    \fi\fi
+}
+
 
 % Calculus
 
