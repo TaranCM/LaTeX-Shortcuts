@@ -1,11 +1,11 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{shortcuts}[2025/04/26 01:37 Custom Package] % Last edit date
+\ProvidesPackage{shortcuts}[2025/06/01 04:04 Custom Package] % Last edit date
 
 \RequirePackage{amssymb,calligra}
 
 % Text enclosure
 
-\newcommand{\lp}{\left(}
+\newcommand{\lp}{\left(}                                        % Reminder: Make sure to leave separation between the command subsequent text to avoid errors.
 \newcommand{\rp}{\right)}
 \newcommand{\lb}{\left[}
 \newcommand{\rb}{\right]}
@@ -19,14 +19,14 @@
 \newcommand{\cov}[1]{\text{cov}\left(#1\right)}
 \newcommand{\corr}[1]{\text{corr}\left(#1\right)}
 \newcommand{\F}{\mathcal{F}}
-\newcommand{\deq}[0]{\overset{\Delta}{=}}
+\newcommand{\deq}[0]{\overset{\Delta}{=}}                       % Equality in distribution
 \newcommand{\E}[2][b]{
     \ifx b#1\mathbb{E}\left[#2\right]\else
     \ifx p#1\mathbb{E}\left(#2\right)\else
     \mathrm{Illegal~option}
     \fi\fi
 }
-\newcommand{\Eif}[3][r]{
+\newcommand{\Eif}[3][r]{                                        % Conditional expectation
     \ifx r#1\mathbb{E}\left[#2\left|#3\right.\right]\else
     \ifx l#1\mathbb{E}\left[\left.#2\right|#3\right]\else
     \mathrm{Illegal~option}
@@ -39,8 +39,8 @@
 \newcommand{\del}{\partial}
 
 % Sets
-\newcommand{\seq}[3]{\left\{#1\right\}_{#2}^{#3}}
-\newcommand{\setof}[3][b]{%
+\newcommand{\seq}[3]{\left\{#1\right\}_{#2}^{#3}}               % Sequence with optional begin and end indices
+\newcommand{\setof}[3][b]{%                                     % Set given certain conditions
     \ifx b#1\left\{#2\left|#3\right.\right\}\else% bar
     \ifx c#1\left\{#2:#3\right\}\else% colon
     \ifx n#1\left\{#2\right\}#3\else% none
@@ -57,7 +57,7 @@
 
 % General typefacing
 
-\renewcommand{\cal}[1]{\text{\calligra#1\normalfont}} % use in mathmode
+\renewcommand{\cal}[1]{\text{\calligra#1\normalfont}}           % Calligraphic font for use in mathmode
 
 
 
