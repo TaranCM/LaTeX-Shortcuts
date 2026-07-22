@@ -15,6 +15,11 @@
 \newcommand{\ra}{\right\rangle}
 \newcommand{\labs}{\left|}
 \newcommand{\rabs}{\right|}
+\newcommand{\lv}{\left\vert}
+\newcommand{\rv}{\right\vert}
+\newcommand{\lnull}{\left.}
+\newcommand{\rnull}{\right.}
+
 
 % Stats
 
@@ -37,6 +42,7 @@
     \fi\fi
 }
 
+
 % Calculus
 
 \newcommand{\del}{\partial}
@@ -45,6 +51,7 @@
 \newcommand{\curl}{\grad\times}
 
 % Sets
+
 \newcommand{\seq}[3]{\left\{#1\right\}_{#2}^{#3}}
 \newcommand{\setof}[3][b]{%
     \ifx b#1\left\{#2\left|#3\right.\right\}\else% bar
@@ -53,7 +60,6 @@
     \mathrm{Illegal~option}%
     \fi\fi\fi%
 }
-    
 
 
 % Proofs
@@ -61,6 +67,17 @@
 \newcommand{\ceq}{\overset{\checkmark}{=}}
 \newcommand{\qeq}{\overset{?}{=}}
 \newcommand{\qed}{\ \square}
+
+
+% Physics
+
+\newcommand{\ket}[1]{\left\vert#1\right\rangle}
+\newcommand{\bra}[1]{\left\langle#1\right\vert}
+\newcommand{\braket}[2]{\left\langle\left.#1\right\vert#2\right\rangle}
+\newcommand{\nket}[1]{|#1\rangle}
+\newcommand{\nbra}[1]{\langle#1|}
+\newcommand{\nbraket}[2]{\langle#1|#2\rangle}
+
 
 % General typefacing
 
